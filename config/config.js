@@ -1,7 +1,9 @@
 export default {
-    singular: true,
-    plugins:[
-        ['umi-plugin-react',{}],
+    // singular: true,
+    plugins: [
+        ['umi-plugin-react', {
+            antd: true
+        }],
     ],
     routes:[{
         path: '/',
@@ -10,6 +12,18 @@ export default {
     {
         path: '/users',
         component: './Users',
+    },
+    // {
+    //     path: '/shoppingList',
+    //     component: './ShoppingList'
+    // }
+    {
+        path: '/content',
+        component: './Content'
+    },
+    {
+        path: '/demo',
+        component: './Demo'
     }
 ]
 };

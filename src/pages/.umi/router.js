@@ -8,12 +8,27 @@ let Router = DefaultRouter;
 
 let routes = [
   {
-    "path": "/HelloWorld",
-    "exact": true,
-    "component": require('../HelloWorld.js').default
+    "path": "/",
+    "component": require('../HelloWorld').default,
+    "exact": true
   },
   {
-    "component": () => React.createElement(require('/Users/mayongkang/workspace/react/antd-course/node_modules/_umi-build-dev@1.5.5@umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: false })
+    "path": "/users",
+    "component": require('../Users').default,
+    "exact": true
+  },
+  {
+    "path": "/content",
+    "component": require('../Content').default,
+    "exact": true
+  },
+  {
+    "path": "/demo",
+    "component": require('../Demo').default,
+    "exact": true
+  },
+  {
+    "component": () => React.createElement(require('/Users/mayongkang/workspace/react/antd-course/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: true })
   }
 ];
 window.g_routes = routes;
